@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fortuna.Web.Blazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de4120a4d9b24df14dda46485348e1d78f0c87cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ace3c8b11bc15d5eec71743b5ce024d67d02dbd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fortuna.Web.Blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fortuna.Web.Blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

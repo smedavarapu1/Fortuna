@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fortuna.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ace3c8b11bc15d5eec71743b5ce024d67d02dbd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dc5516dc4e01753e4bd8cee0deef04a849c66ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fortuna.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fortuna.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

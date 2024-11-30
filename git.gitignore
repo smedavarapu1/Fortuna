@@ -14,3 +14,11 @@ node_modules/
 
 # Ignore environment files
 .env
+# Ignore build directories
+bin/
+obj/
+
+# Ignore temporary files
+*.cache
+*.user
+*.log

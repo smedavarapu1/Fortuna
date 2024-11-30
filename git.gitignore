@@ -1,0 +1,16 @@
+# Ignore the Visual Studio .vs folder
+.vs/
+
+# Ignore compiled files
+*.o
+*.out
+*.class
+
+# Ignore log files
+*.log
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore environment files
+.env

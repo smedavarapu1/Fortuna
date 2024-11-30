@@ -1,0 +1,12 @@
+E:\Fortuna\Fortuna\Code\Fortuna.Core\bin\Debug\net8.0\Fortuna.Core.deps.json
+E:\Fortuna\Fortuna\Code\Fortuna.Core\bin\Debug\net8.0\Fortuna.Core.dll
+E:\Fortuna\Fortuna\Code\Fortuna.Core\bin\Debug\net8.0\Fortuna.Core.pdb
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.AssemblyInfoInputs.cache
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.AssemblyInfo.cs
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.csproj.CoreCompileInputs.cache
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.sourcelink.json
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.dll
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\refint\Fortuna.Core.dll
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\Fortuna.Core.pdb
+E:\Fortuna\Fortuna\Code\Fortuna.Core\obj\Debug\net8.0\ref\Fortuna.Core.dll

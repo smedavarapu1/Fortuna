@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "Fortuna.API\\Fortuna.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "Fortuna.Web.Blazor\\Fortuna.Web.Blazor.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

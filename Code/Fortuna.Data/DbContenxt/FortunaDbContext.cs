@@ -2,11 +2,6 @@
 using Fortuna.Data.Entities.Common;
 using Fortuna.Data.Entities.Expense;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fortuna.Data.DbContenxt
 {
@@ -14,9 +9,11 @@ namespace Fortuna.Data.DbContenxt
     {
         public FortunaDbContext(DbContextOptions<FortunaDbContext> options) : base(options) { }
 
-        public DbSet<Expense> Expenses { get; set; }
-        public DbSet<ExpenseType> ExpenseTypes { get; set; }
-        public DbSet<Asset> Assets { get; set; }
-        public DbSet<Country> Countries { get; set; }
+        public DbSet<Expense> Expense { get; set; }
+        public DbSet<ExpenseType> ExpenseType { get; set; }
+        public DbSet<ExpenseItemType> ExpenseItemType { get; set; }
+        public DbSet<Asset> Asset { get; set; }
+        public DbSet<AssetType> AssetType { get; set; }
+        public DbSet<Country> Country { get; set; }
     }
 }

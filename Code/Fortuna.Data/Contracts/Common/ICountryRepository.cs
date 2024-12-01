@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fortuna.Data.Contracts.Common
 {
-    internal interface ICountryRepository
+    public interface ICountryRepository
     {
     }
 }

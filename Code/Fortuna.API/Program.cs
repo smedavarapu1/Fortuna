@@ -1,5 +1,9 @@
+using Fortuna.Data.Contracts.Expense;
 using Fortuna.Data.DbContenxt;
+using Fortuna.Services.Contracts.Expense;
+using Fortuna.Services.Profiles;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +14,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<FortunaDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add AutoMapper with the single MappingProfile
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+// Automatically register services and repositories
+var assembliesToScan = new[]
+{
+    Assembly.GetAssembly(typeof(IExpenseService)),  // Fortuna.Services
+    Assembly.GetAssembly(typeof(IExpenseRepository)) // Fortuna.Data
+};
+
+// Loops through all the services and repositories and registers them.
+RegisterDI(builder, assembliesToScan);
 
 var app = builder.Build();
 
@@ -23,29 +40,37 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
 
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+static void RegisterDI(WebApplicationBuilder builder, Assembly?[] assembliesToScan)
 {
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    foreach (var assembly in assembliesToScan)
+    {
+        foreach (var type in assembly.GetTypes())
+        {
+            if (type.IsClass && !type.IsAbstract)
+            {
+                // Register Services
+                if (type.Name.EndsWith("Service"))
+                {
+                    var interfaceType = type.GetInterface($"I{type.Name}");
+                    if (interfaceType != null)
+                    {
+                        builder.Services.AddScoped(interfaceType, type);
+                    }
+                }
+
+                // Register Repositories
+                if (type.Name.EndsWith("Repository"))
+                {
+                    var interfaceType = type.GetInterface($"I{type.Name}");
+                    if (interfaceType != null)
+                    {
+                        builder.Services.AddScoped(interfaceType, type);
+                    }
+                }
+            }
+        }
+    }
 }

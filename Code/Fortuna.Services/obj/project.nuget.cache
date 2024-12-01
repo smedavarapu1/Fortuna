@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Xj4HsDTwTYNWEK5dV/il+doY7Bd0ccCUH+C7fDitccawJzw+kpIO7LjlcpaKhm+GPXFXqLVDIyLq6UAdfDjFkw==",
+  "dgSpecHash": "MAQb5S2+X71JP1Nb5toZPuJC1h90z7RErR2YT01fud/Kth5V7O5KV2lVst61PnotqC/h5JIMLV2tvECZiXwHLQ==",
   "success": true,
   "projectFilePath": "E:\\Fortuna\\Fortuna\\Code\\Fortuna.Services\\Fortuna.Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vaibh\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\vaibh\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\vaibh\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\vaibh\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\vaibh\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\vaibh\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\vaibh\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\vaibh\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.6\\microsoft.data.sqlclient.5.1.6.nupkg.sha512",
     "C:\\Users\\vaibh\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.1\\microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "C:\\Users\\vaibh\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.0\\microsoft.entityframeworkcore.9.0.0.nupkg.sha512",

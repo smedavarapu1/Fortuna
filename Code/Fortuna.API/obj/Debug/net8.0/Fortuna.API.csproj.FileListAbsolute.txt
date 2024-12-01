@@ -92,3 +92,5 @@ E:\Fortuna\Fortuna\Code\Fortuna.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\Sys
 E:\Fortuna\Fortuna\Code\Fortuna.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\Fortuna\Fortuna\Code\Fortuna.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 E:\Fortuna\Fortuna\Code\Fortuna.API\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\Fortuna\Fortuna\Code\Fortuna.API\bin\Debug\net8.0\AutoMapper.dll
+E:\Fortuna\Fortuna\Code\Fortuna.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

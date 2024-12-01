@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fortuna.Data.Contracts.Expense
 {
-    internal interface IExpenseItemTypeRepository
+    public interface IExpenseItemTypeRepository
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fortuna.Data.Contracts.Asset
 {
-    internal interface IAssetTypeRepository
+    public interface IAssetTypeRepository
     {
     }
 }

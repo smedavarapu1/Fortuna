@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fortuna.Data.Contracts.Expense;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Fortuna.Data.Repositories.Expense
 {
-    internal class ExpenseItemTypeRepository
+    public class ExpenseItemTypeRepository: IExpenseItemTypeRepository
     {
+
     }
 }

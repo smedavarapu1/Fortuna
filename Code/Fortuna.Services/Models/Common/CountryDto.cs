@@ -4,29 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fortuna.Core.Models.Expense
+namespace Fortuna.Services.Models.Common
 {
-    public class ExpenseItemType
+    public class CountryDto
     {
         /// <summary>
-        /// Gets or sets the ExpenseItemId
+        /// Gets or sets the CountryId
         /// </summary>
-        public int ExpenseItemId { get; set; }
+        public int CountryId { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseItemTypeValue
+        /// Gets or sets the CountryValue
         /// </summary>
-        public string ExpenseItemTypeValue { get; set; }
+        public string CountryValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseItemTypeDisplayValue
+        /// Gets or sets the CountryDisplayValue
         /// </summary>
-        public string ExpenseItemTypeDisplayValue { get; set; }
+        public string CountryDisplayValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseItemTypeDescription
+        /// Gets or sets the CountryDescription
         /// </summary>
-        public string ExpenseItemTypeDescription { get; set; }
+        public string CountryDescription { get; set; }
 
         /// <summary>
         /// Gets or sets the SortOrder
@@ -47,6 +47,5 @@ namespace Fortuna.Core.Models.Expense
         /// Gets or sets the UpdatedDate
         /// </summary>
         public DateTime UpdatedDate { get; set; }
-
     }
 }

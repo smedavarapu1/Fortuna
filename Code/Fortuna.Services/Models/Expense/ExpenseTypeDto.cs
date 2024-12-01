@@ -4,29 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fortuna.Core.Models.Common
+namespace Fortuna.Services.Models.Expense
 {
-    public class Country
+    public class ExpenseTypeDto
     {
         /// <summary>
-        /// Gets or sets the CountryId
+        /// Gets or sets the ExpenseTypeId
         /// </summary>
-        public int CountryId { get; set; }
+        public int ExpenseTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the CountryValue
+        /// Gets or sets the ExpenseTypeValue
         /// </summary>
-        public string CountryValue { get; set; }
+        public string ExpenseTypeValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the CountryDisplayValue
+        /// Gets or sets the ExpenseTypeDisplayValue
         /// </summary>
-        public string CountryDisplayValue { get; set; }
+        public string ExpenseTypeDisplayValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the CountryDescription
+        /// Gets or sets the ExpenseTypeDescription
         /// </summary>
-        public string CountryDescription { get; set; }
+        public string ExpenseTypeDescription { get; set; }
 
         /// <summary>
         /// Gets or sets the SortOrder

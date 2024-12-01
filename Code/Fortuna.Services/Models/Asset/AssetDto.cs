@@ -4,34 +4,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fortuna.Core.Models.Asset
+namespace Fortuna.Services.Models.Asset
 {
-    public class AssetType
+    public class AssetDto
     {
+        /// <summary>
+        /// Gets or sets the AssetId
+        /// </summary>
+        public int AssetId { get; set; }
+
         /// <summary>
         /// Gets or sets the AssetTypeId
         /// </summary>
         public int AssetTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the AssetTypeValue
+        /// Gets or sets the AssetName
         /// </summary>
-        public string AssetTypeValue { get; set; }
+        public string AssetName { get; set; }
 
         /// <summary>
-        /// Gets or sets the AssetTypeDisplayValue
+        /// Gets or sets the BoughtPrice
         /// </summary>
-        public string AssetTypeDisplayValue { get; set; }
+        public decimal? BoughtPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets the AssetTypeDescription
+        /// Gets or sets the CurrentPrice
         /// </summary>
-        public string AssetTypeDescription { get; set; }
+        public decimal? CurrentPrice { get; set; }
 
         /// <summary>
-        /// Gets or sets the SortOrder
+        /// Gets or sets the CountryId
         /// </summary>
-        public int? SortOrder { get; set; }
+        public int CountryId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Year
+        /// </summary>
+        public int? Year { get; set; }
 
         /// <summary>
         /// Gets or sets the Active

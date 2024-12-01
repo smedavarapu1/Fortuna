@@ -4,29 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fortuna.Core.Models.Expense
+namespace Fortuna.Services.Models.Asset
 {
-    public class ExpenseType
+    public class AssetTypeDto
     {
         /// <summary>
-        /// Gets or sets the ExpenseTypeId
+        /// Gets or sets the AssetTypeId
         /// </summary>
-        public int ExpenseTypeId { get; set; }
+        public int AssetTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseTypeValue
+        /// Gets or sets the AssetTypeValue
         /// </summary>
-        public string ExpenseTypeValue { get; set; }
+        public string AssetTypeValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseTypeDisplayValue
+        /// Gets or sets the AssetTypeDisplayValue
         /// </summary>
-        public string ExpenseTypeDisplayValue { get; set; }
+        public string AssetTypeDisplayValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseTypeDescription
+        /// Gets or sets the AssetTypeDescription
         /// </summary>
-        public string ExpenseTypeDescription { get; set; }
+        public string AssetTypeDescription { get; set; }
 
         /// <summary>
         /// Gets or sets the SortOrder

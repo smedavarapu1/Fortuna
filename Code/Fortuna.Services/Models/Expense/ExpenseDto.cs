@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fortuna.Core.Models.Expense
+namespace Fortuna.Services.Models.Expense
 {
-    public class Expense
+    public class ExpenseDto
     {
         /// <summary>
         /// Gets or sets the ExpenseId

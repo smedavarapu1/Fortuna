@@ -1,13 +1,14 @@
-﻿using Fortuna.Data.Contracts.Asset;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using Fortuna.Data.Contracts.Asset;
+using Fortuna.Data.DbContenxt;
 
 namespace Fortuna.Data.Repositories.Asset
 {
-    public class AssetTypeRepository: IAssetTypeRepository
+    public class AssetTypeRepository: BaseRepository, IAssetTypeRepository
     {
+        public AssetTypeRepository(FortunaDbContext dbContext, IMapper mapper) : base(dbContext, mapper)
+        {
+            
+        }
     }
 }

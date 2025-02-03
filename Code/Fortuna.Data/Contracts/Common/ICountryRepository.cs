@@ -8,5 +8,10 @@ namespace Fortuna.Data.Contracts.Common
 {
     public interface ICountryRepository
     {
+        Task<Entities.Common.Country> GetCountryAsync(int countryId);
+
+        Task<List<Entities.Common.Country>> GetCountriesAsync();
+
+        Task<Entities.Common.Country> SaveCountryAsync(Entities.Common.Country country);
     }
 }

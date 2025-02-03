@@ -35,23 +35,5 @@ namespace Fortuna.API.Controllers
 
             return Ok(assetTypes);
         }
-
-        /// <summary>
-        /// Saves or updates an asset type.
-        /// </summary>
-        /// <param name="assetTypeDto">The asset type DTO to save.</param>
-        /// <returns>The saved or updated asset type DTO.</returns>
-        [HttpPost("assettypes")]
-        public async Task<ActionResult<AssetTypeDto>> SaveAssetTypeAsync([FromBody] AssetTypeDto assetTypeDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var savedAssetType = await _assetTypeService.SaveAssetTypeAsync(assetTypeDto);
-
-            return Ok(savedAssetType);
-        }
     }
 }

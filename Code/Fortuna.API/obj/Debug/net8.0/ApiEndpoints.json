@@ -1,28 +1,8 @@
 [
   {
-    "ContainingType": "Fortuna.API.Controllers.LookupController",
-    "Method": "GetAssetTypesAsync",
-    "RelativePath": "api/Lookup/assettypes",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[Fortuna.Services.Models.Asset.AssetTypeDto, Fortuna.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Fortuna.API.Controllers.LookupController",
+    "ContainingType": "Fortuna.API.Controllers.AssetTypeController",
     "Method": "SaveAssetTypeAsync",
-    "RelativePath": "api/Lookup/assettypes",
+    "RelativePath": "api/AssetType/save/assettype",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -36,6 +16,26 @@
     "ReturnTypes": [
       {
         "Type": "Fortuna.Services.Models.Asset.AssetTypeDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Fortuna.API.Controllers.LookupController",
+    "Method": "GetAssetTypesAsync",
+    "RelativePath": "api/Lookup/assettypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Fortuna.Services.Models.Asset.AssetTypeDto, Fortuna.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

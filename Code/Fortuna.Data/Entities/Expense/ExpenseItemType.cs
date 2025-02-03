@@ -11,7 +11,7 @@ namespace Fortuna.Data.Entities.Expense
         /// <summary>
         /// Gets or sets the ExpenseItemId
         /// </summary>
-        public int ExpenseItemId { get; set; }
+        public int ExpenseItemTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the ExpenseItemTypeValue

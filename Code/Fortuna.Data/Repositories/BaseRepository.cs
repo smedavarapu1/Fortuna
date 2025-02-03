@@ -29,7 +29,7 @@ namespace Fortuna.Data.Repositories
         /// <param name="entity">The entity to save.</param>
         public async Task SaveAsync<T>(T entity) where T : class
         {
-            AttachEntity(entity);
+            AttachOrAddEntity(entity);
             await _dbContext.SaveChangesAsync();
         }
 
@@ -42,23 +42,55 @@ namespace Fortuna.Data.Repositories
         {
             foreach (var entity in entities)
             {
-                AttachEntity(entity);
+                AttachOrAddEntity(entity);
             }
             await _dbContext.SaveChangesAsync();
         }
 
-        private void AttachEntity<T>(T entity) where T : class
+        private void AttachOrAddEntity<T>(T entity) where T : class
         {
             var entry = _dbContext.Entry(entity);
-            if (entry.State == EntityState.Detached)
+            // Dynamically get the primary key based on the entity type name and conventional naming
+            bool isNew = CheckIfEntityIsNew(entity);
+
+            if (isNew)
             {
-                _dbContext.Set<T>().Attach(entity);
-                entry.State = EntityState.Modified;
+                // Entity is new, add it to the context
+                _dbContext.Set<T>().Add(entity);
             }
-            else if (entry.State == EntityState.Unchanged)
+            else
             {
-                entry.State = EntityState.Modified;
+                // Existing entity, attach and mark as modified
+                if (entry.State == EntityState.Detached)
+                {
+                    _dbContext.Set<T>().Attach(entity);
+                    entry.State = EntityState.Modified;
+                }
+                else if (entry.State == EntityState.Unchanged)
+                {
+                    entry.State = EntityState.Modified;
+                }
             }
+        }
+
+        // Generic method to check if the entity is new by looking for a primary key with a default value
+        private bool CheckIfEntityIsNew<T>(T entity) where T : class
+        {
+            var entityType = entity.GetType();
+            var keyPropertyName = entityType.Name + "Id";  // Assuming the primary key follows the convention 'EntityNameId'
+            var keyProperty = entityType.GetProperty(keyPropertyName);
+
+            if (keyProperty != null)
+            {
+                object value = keyProperty.GetValue(entity);
+                if (value is int intValue)
+                    return intValue == 0;  // Assuming the default value for a new entity's int primary key is 0
+                if (value is long longValue)
+                    return longValue == 0;  // Assuming long for larger datasets
+                                            // Include other types as necessary based on your database schema
+            }
+
+            return false; // If no appropriate key property found, or the key property does not have a default indicating new
         }
 
         #endregion

@@ -32,5 +32,9 @@ namespace Fortuna.Data.Entities.Expense
         /// Gets or sets the ExpenseName
         /// </summary>
         public string ExpenseName { get; set; }
+
+        public int? QuantityTypeId { get; set; }
+
+        public int? Quantity { get; set; }
     }
 }

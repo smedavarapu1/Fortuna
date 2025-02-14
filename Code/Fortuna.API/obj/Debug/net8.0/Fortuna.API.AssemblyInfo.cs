@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fortuna.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b615435f50ae040c620a2aab163833f10035b50f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa76e2f044d64b41e2aadee7b5c0dccf7b86a863")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fortuna.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fortuna.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -26,6 +26,26 @@
     ]
   },
   {
+    "ContainingType": "Fortuna.API.Controllers.CountryController",
+    "Method": "GetCountriesAsync",
+    "RelativePath": "api/Country/countries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Fortuna.Services.Models.Asset.AssetTypeDto, Fortuna.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Fortuna.API.Controllers.LookupController",
     "Method": "GetAssetTypesAsync",
     "RelativePath": "api/Lookup/assettypes",

@@ -26,10 +26,10 @@ namespace Fortuna.Data.Repositories.Expense
                 .ToListAsync();
         }
 
-        public async Task<Entities.Expense.Expense> SaveExpenseAsync(Entities.Expense.Expense asset)
+        public async Task<Entities.Expense.Expense> SaveExpenseAsync(Entities.Expense.Expense expense)
         {
-            await SaveAsync(asset); // Use BaseRepository SaveAsync method
-            return asset;
+            await SaveAsync(expense); // Use BaseRepository SaveAsync method
+            return expense;
         }
     }
 }

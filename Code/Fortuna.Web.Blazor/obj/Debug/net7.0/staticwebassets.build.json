@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rIpuvvuE1lGMG6UgnKsKrfEZsTWcLe0WLrSOqorT6Xo=",
+  "Hash": "g2q9A5N4FokK2lG0z2Lo/cXsj9QcC/3un8SoJcDYttY=",
   "Source": "Fortuna.Web.Blazor",
   "BasePath": "_content/Fortuna.Web.Blazor",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\vaibh\\.nuget\\packages\\mudblazor\\7.16.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\vaibh\\.nuget\\packages\\mudblazor\\7.16.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vaibh\\.nuget\\packages\\mudblazor\\7.16.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\vaibh\\.nuget\\packages\\mudblazor\\7.16.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\vaibh\\.nuget\\packages\\mudblazor\\7.16.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\vaibh\\.nuget\\packages\\mudblazor\\7.16.0\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "E:\\Fortuna\\Fortuna\\Code\\Fortuna.Web.Blazor\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Fortuna.Web.Blazor.styles.css",
       "SourceId": "Fortuna.Web.Blazor",

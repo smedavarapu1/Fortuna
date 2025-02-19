@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Fortuna.Web.Blazor.Data;
+using MudBlazor.Services;
+using MudBlazor;
+using Fortuna.Web.Blazor.Services;
+using Fortuna.Web.Blazor.Services.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddMudServices();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7063/") });
+builder.Services.AddScoped<IFortunaAPIService, FourtnaApiService>();
+
+builder.Services.AddHttpClient("FortunaApi", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7063/");
+});
+
 
 var app = builder.Build();
 

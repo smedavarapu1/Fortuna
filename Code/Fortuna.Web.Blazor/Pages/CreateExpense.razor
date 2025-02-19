@@ -1,0 +1,57 @@
+﻿@page "/CreateExpense"
+@page "/create-expense"
+@using Fortuna.Web.Blazor.Models.Expense
+
+<MudContainer>
+    <MudCard>
+        <MudCardContent>
+
+            <MudText Typo="Typo.h5" Class="expense-title">Create Expense</MudText>
+
+            <MudGrid Spacing="2">
+                <MudItem xs="12" sm="6">
+                    <MudSelect @bind-Value="selectedExpenseTypeId" Label="Expense Type" Dense Required>
+                        @foreach (var type in ExpenseTypes)
+                        {
+                            <MudSelectItem Value="type.ExpenseTypeId">@type.ExpenseTypeDisplayValue</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12" sm="6">
+                    <MudSelect @bind-Value="selectedExpenseItemId" Label="Expense Item" Dense Required Searchable>
+                        @foreach (var item in ExpenseItems)
+                        {
+                            <MudSelectItem Value="item.ExpenseItemId">@item.ExpenseItemTypeDisplayValue</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12" sm="6">
+                    <MudTextField Label="Expense Amount ($)" @bind-Value="expenseAmount" Type="number" Dense Required />
+                </MudItem>
+
+                <MudItem xs="12" sm="6">
+                    <MudTextField Label="Quantity" @bind-Value="quantity" Type="number" Dense />
+                </MudItem>
+
+                <MudItem xs="12" sm="6">
+                    <MudDatePicker Label="Expense Date" @bind-Value="expenseDate" Dense />
+                </MudItem>
+            </MudGrid>
+
+            <!-- Notes (Optional) -->
+            <MudTextField Label="Notes" @bind-Value="notes" Lines="2" FullWidth Dense />
+
+            <!-- Save Button -->
+            <MudButton OnClick="SaveExpense" Color="Color.Primary" Variant="Variant.Filled" Class="save-button">
+                Save Expense
+            </MudButton>
+
+            <!-- Running Total Display -->
+            <MudText Typo="Typo.h6" Class="total-expense">Total Expenses for Today: $@totalExpenseToday</MudText>
+            <MudText Typo="Typo.h6" Class="total-expense">Total Expenses for This Month: $@totalExpenseMonth</MudText>
+
+        </MudCardContent>
+    </MudCard>
+</MudContainer>

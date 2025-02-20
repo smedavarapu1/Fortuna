@@ -19,9 +19,9 @@ namespace Fortuna.Data.Entities.Expense
         public int ExpenseTypeId { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseItemId
+        /// Gets or sets the ExpenseItemTypeId
         /// </summary>
-        public int ExpenseItemId { get; set; }
+        public int ExpenseItemTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the ExpenseAmount
@@ -36,5 +36,13 @@ namespace Fortuna.Data.Entities.Expense
         public int? QuantityTypeId { get; set; }
 
         public int? Quantity { get; set; }
+
+        public DateTime PurchaseDate { get; set; }
+
+        public DateTime UpdatedDate = DateTime.Now;
+
+        public string UpdatedBy = "system";
+
+        public int StoreId { get; set; }
     }
 }

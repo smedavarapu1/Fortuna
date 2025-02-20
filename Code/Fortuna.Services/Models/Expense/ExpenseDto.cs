@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fortuna.Services.Models.Expense
+﻿namespace Fortuna.Services.Models.Expense
 {
     public class ExpenseDto
     {
@@ -21,7 +15,7 @@ namespace Fortuna.Services.Models.Expense
         /// <summary>
         /// Gets or sets the ExpenseItemId
         /// </summary>
-        public int ExpenseItemId { get; set; }
+        public int ExpenseItemTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the ExpenseAmount
@@ -36,5 +30,9 @@ namespace Fortuna.Services.Models.Expense
         public int? QuantityTypeId { get; set; }
 
         public int? Quantity { get; set; }
+
+        public DateTime PurchaseDate { get; set; }
+
+        public int StoreId { get; set; }
     }
 }

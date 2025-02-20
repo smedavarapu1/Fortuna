@@ -1,26 +1,27 @@
-﻿namespace Fortuna.Web.Blazor.Models.Expense
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fortuna.Data.Entities.Expense
 {
-    public class ExpenseItemTypeDto
+    public class QuantityType
     {
         /// <summary>
-        /// Gets or sets the ExpenseItemId
+        /// Gets or sets the QuantityTypeValue
         /// </summary>
-        public int ExpenseItemTypeId { get; set; }
+        public string QuantityTypeValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseItemTypeValue
+        /// Gets or sets the QuantityTypeDisplayValue
         /// </summary>
-        public string ExpenseItemTypeValue { get; set; }
+        public string QuantityTypeDisplayValue { get; set; }
 
         /// <summary>
-        /// Gets or sets the ExpenseItemTypeDisplayValue
+        /// Gets or sets the QuantityTypeDescription
         /// </summary>
-        public string ExpenseItemTypeDisplayValue { get; set; }
-
-        /// <summary>
-        /// Gets or sets the ExpenseItemTypeDescription
-        /// </summary>
-        public string ExpenseItemTypeDescription { get; set; }
+        public string QuantityTypeDescription { get; set; }
 
         /// <summary>
         /// Gets or sets the SortOrder
@@ -41,5 +42,10 @@
         /// Gets or sets the UpdatedDate
         /// </summary>
         public DateTime UpdatedDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the QuantityTypeId
+        /// </summary>
+        public int QuantityTypeId { get; set; }
     }
 }

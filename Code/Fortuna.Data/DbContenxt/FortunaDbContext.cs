@@ -15,5 +15,7 @@ namespace Fortuna.Data.DbContenxt
         public DbSet<Asset> Asset { get; set; }
         public DbSet<AssetType> AssetType { get; set; }
         public DbSet<Country> Country { get; set; }
+        public DbSet<QuantityType>QuantityType { get; set; }
+        public DbSet<Store> Store { get; set; }
     }
 }

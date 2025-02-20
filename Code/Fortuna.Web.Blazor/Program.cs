@@ -14,7 +14,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddMudServices();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7063/") });
-builder.Services.AddScoped<IFortunaAPIService, FourtnaApiService>();
+builder.Services.AddScoped<IFortunaAPIService, FortunaApiService>();
 
 builder.Services.AddHttpClient("FortunaApi", client =>
 {

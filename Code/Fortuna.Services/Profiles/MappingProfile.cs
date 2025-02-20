@@ -18,6 +18,8 @@ namespace Fortuna.Services.Profiles
             this.CreateMap<Asset, AssetDto>().ReverseMap();
             this.CreateMap<AssetType, AssetTypeDto>().ReverseMap();
             this.CreateMap<Country, CountryDto>().ReverseMap();
+            this.CreateMap<Store, StoreDto>().ReverseMap();
+            this.CreateMap<QuantityType, QuantityTypeDto>().ReverseMap();
         }
     }
 }

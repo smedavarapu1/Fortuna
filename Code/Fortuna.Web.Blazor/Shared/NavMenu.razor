@@ -9,7 +9,12 @@
     <MudNavMenu>
         <MudNavLink Href="/dashboard" Icon="mdi-view-dashboard">Dashboard</MudNavLink>
         <MudNavLink Href="/assets" Icon="mdi-bank">Assets</MudNavLink>
-        <MudNavLink Href="/create-expense" Icon="mdi-cash-multiple">Expenses</MudNavLink>
+
+        <MudNavGroup Icon="mdi-cash-multiple" Title="Expenses">
+            <MudNavLink Href="/expenses">View Expenses</MudNavLink>
+            <MudNavLink Href="/create-expense">Create Expense</MudNavLink>
+        </MudNavGroup>
+
         <MudNavLink Href="/reports" Icon="mdi-chart-line">Reports</MudNavLink>
         <MudNavLink Href="/settings" Icon="mdi-cog">Settings</MudNavLink>
     </MudNavMenu>

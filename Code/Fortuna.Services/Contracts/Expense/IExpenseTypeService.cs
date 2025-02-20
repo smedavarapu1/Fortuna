@@ -14,5 +14,9 @@ namespace Fortuna.Services.Contracts.Expense
         Task<List<ExpenseTypeDto>> GetExpenseTypesAsync();
 
         Task<ExpenseTypeDto> SaveExpenseTypeAsync(ExpenseTypeDto expenseType);
+
+        Task<List<QuantityTypeDto>> GetQuantityTypes();
+
+        Task<List<StoreDto>> GetStoresAsync();
     }
 }

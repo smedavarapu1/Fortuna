@@ -1,31 +1,25 @@
 ﻿using Fortuna.Web.Blazor.Services.Contracts;
 using Microsoft.AspNetCore.Components;
 using Fortuna.Web.Blazor.Models.Expense;
+using Fortuna.Web.Blazor.Shared.Components;
 
 namespace Fortuna.Web.Blazor.Pages
 {
-    partial class CreateExpense : ComponentBase
+    partial class CreateExpense : BaseComponent
     {
         [Inject] IFortunaAPIService FortunaApiService { get; set; }
 
-        private List<ExpenseTypeDto> ExpenseTypes = new();
-        private List<ExpenseItemTypeDto> ExpenseItems = new();
-        private List<int> QuantityTypes = new();
-
         private int selectedExpenseTypeId;
-        private int selectedExpenseItemId;
+        private int selectedExpenseItemTypeId;
         private int selectedQuantityTypeId;
+        private int selectedStoreId;
         private decimal expenseAmount;
         private int quantity;
-        private DateTime expenseDate = DateTime.Today;
+        private DateTime? expenseDate = DateTime.Today;
         private string notes;
-        private decimal totalExpenseToday = 0;
-        private decimal totalExpenseMonth = 0;
         protected override async Task OnInitializedAsync()
         {
-            var assetTypes = await this.FortunaApiService.GetAssetTypesAsync();
-            ExpenseTypes = new List<ExpenseTypeDto>();
-            ExpenseItems = new List<ExpenseItemTypeDto>();
+            await base.OnInitializedAsync();
         }
 
         private async Task SaveExpense()
@@ -33,24 +27,16 @@ namespace Fortuna.Web.Blazor.Pages
             var newExpense = new ExpenseDto
             {
                 ExpenseTypeId = selectedExpenseTypeId,
-                ExpenseItemId = selectedExpenseItemId,
+                ExpenseItemTypeId = selectedExpenseItemTypeId,
                 ExpenseAmount = expenseAmount,
                 QuantityTypeId = selectedQuantityTypeId,
                 Quantity = quantity,
+                PurchaseDate = expenseDate.Value,
+                ExpenseName = "test",
+                StoreId = selectedStoreId
             };
 
-            bool success = true;//await FortunaApiService.AddExpenseAsync(newExpense);
-
-            if (success)
-            {
-                Console.WriteLine("Expense saved successfully!");
-                totalExpenseToday += expenseAmount;
-                totalExpenseMonth += expenseAmount;
-            }
-            else
-            {
-                Console.WriteLine("Error saving expense.");
-            }
+            await this.FortunaApiService.SaveExpenseAsync(newExpense);
         }
     }
 }

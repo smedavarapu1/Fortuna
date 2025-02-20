@@ -1,57 +1,82 @@
 ﻿@page "/CreateExpense"
 @page "/create-expense"
+@inherits BaseComponent
 @using Fortuna.Web.Blazor.Models.Expense
+@using Fortuna.Web.Blazor.Shared.Components
 
-<MudContainer>
-    <MudCard>
-        <MudCardContent>
+<MudContainer Style="max-width: 600px; margin: auto;">
+    <MudPaper Elevation="3" Class="pa-6 rounded-lg">
 
-            <MudText Typo="Typo.h5" Class="expense-title">Create Expense</MudText>
+        <MudText Typo="Typo.h4" Class="mb-4 text-primary">💰 Create Expense</MudText>
 
-            <MudGrid Spacing="2">
-                <MudItem xs="12" sm="6">
-                    <MudSelect @bind-Value="selectedExpenseTypeId" Label="Expense Type" Dense Required>
-                        @foreach (var type in ExpenseTypes)
-                        {
-                            <MudSelectItem Value="type.ExpenseTypeId">@type.ExpenseTypeDisplayValue</MudSelectItem>
-                        }
-                    </MudSelect>
-                </MudItem>
+        <MudGrid Spacing="3">
+            <!-- Expense Type -->
+            <MudItem xs="12" sm="6">
+                <MudSelect @bind-Value="selectedExpenseTypeId" Label="Expense Type" Dense Required FullWidth>
+                    @foreach (var type in ExpenseTypes)
+                    {
+                        <MudSelectItem Value="@(type.ExpenseTypeId)"> @type.ExpenseTypeDisplayValue </MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
 
-                <MudItem xs="12" sm="6">
-                    <MudSelect @bind-Value="selectedExpenseItemId" Label="Expense Item" Dense Required Searchable>
-                        @foreach (var item in ExpenseItems)
-                        {
-                            <MudSelectItem Value="item.ExpenseItemId">@item.ExpenseItemTypeDisplayValue</MudSelectItem>
-                        }
-                    </MudSelect>
-                </MudItem>
+            <!-- Expense Item -->
+            <MudItem xs="12" sm="6">
+                <MudSelect @bind-Value="selectedExpenseItemTypeId" Label="Expense Item" Dense Required FullWidth Searchable>
+                    @foreach (var item in ExpenseItemTypes)
+                    {
+                        <MudSelectItem Value="@(item.ExpenseItemTypeId)"> @item.ExpenseItemTypeDisplayValue </MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
 
-                <MudItem xs="12" sm="6">
-                    <MudTextField Label="Expense Amount ($)" @bind-Value="expenseAmount" Type="number" Dense Required />
-                </MudItem>
+            <!-- Store -->
+             <MudItem xs="12" sm="6">
+                <MudSelect @bind-Value="selectedStoreId" Label="Store" Dense Required FullWidth Searchable>
+                    @foreach (var item in StoreTypes)
+                    {
+                        <MudSelectItem Value="@(item.StoreId)"> @item.StoreDisplayValue </MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
 
-                <MudItem xs="12" sm="6">
-                    <MudTextField Label="Quantity" @bind-Value="quantity" Type="number" Dense />
-                </MudItem>
+            <!-- Quantity Type -->
+            <MudItem xs="12" sm="6">
+                <MudSelect @bind-Value="selectedQuantityTypeId" Label="Quantity Type" Dense Required FullWidth Searchable>
+                    @foreach (var item in QuantityTypes)
+                    {
+                        <MudSelectItem Value="@(item.QuantityTypeId)"> @item.QuantityTypeDisplayValue </MudSelectItem>
+                    }
+                </MudSelect>
+            </MudItem>
 
-                <MudItem xs="12" sm="6">
-                    <MudDatePicker Label="Expense Date" @bind-Value="expenseDate" Dense />
-                </MudItem>
-            </MudGrid>
+            <!-- Expense Amount -->
+            <MudItem xs="12" sm="6">
+                <MudTextField Label="Expense Amount ($)" @bind-Value="expenseAmount" Type="number" Dense Required FullWidth Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.AttachMoney" />
+            </MudItem>
 
-            <!-- Notes (Optional) -->
-            <MudTextField Label="Notes" @bind-Value="notes" Lines="2" FullWidth Dense />
+            <!-- Quantity -->
+            <MudItem xs="12" sm="6">
+                <MudTextField Label="Quantity" @bind-Value="quantity" Type="number" Dense FullWidth Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.ProductionQuantityLimits" />
+            </MudItem>
 
-            <!-- Save Button -->
-            <MudButton OnClick="SaveExpense" Color="Color.Primary" Variant="Variant.Filled" Class="save-button">
+            <!-- Expense Date -->
+            <MudItem xs="12" sm="6">
+                <MudDatePicker Label="Expense Date" @bind-Date="expenseDate" />
+            </MudItem>
+
+            <!-- Notes -->
+            <MudItem xs="12" sm="6">
+                <MudTextField Label="Notes" @bind-Value="notes" Lines="3" FullWidth Dense Variant="Variant.Outlined" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.EditNote" />
+            </MudItem>
+        </MudGrid>
+
+        <!-- Save Button -->
+        <MudPaper Elevation="0" Class="d-flex justify-end mt-6">
+            <MudButton OnClick="SaveExpense" Color="Color.Primary" Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Save" Class="px-6 py-2 rounded-md">
                 Save Expense
             </MudButton>
+        </MudPaper>
 
-            <!-- Running Total Display -->
-            <MudText Typo="Typo.h6" Class="total-expense">Total Expenses for Today: $@totalExpenseToday</MudText>
-            <MudText Typo="Typo.h6" Class="total-expense">Total Expenses for This Month: $@totalExpenseMonth</MudText>
-
-        </MudCardContent>
-    </MudCard>
+    </MudPaper>
 </MudContainer>

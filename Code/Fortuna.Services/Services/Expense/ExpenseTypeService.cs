@@ -34,5 +34,18 @@ namespace Fortuna.Services.Services.Expense
             var savedEntity = await this._expenseTypeRepository.SaveExpenseTypeAsync(expenseTypeEntity);
             return _mapper.Map<ExpenseTypeDto>(savedEntity);
         }
+
+        public async Task<List<QuantityTypeDto>> GetQuantityTypes()
+        {
+            var quantityTypes = await this._expenseTypeRepository.GetQuantityTypesAsync();
+            return _mapper.Map<List<QuantityTypeDto>>(quantityTypes);
+        }
+
+        public async Task<List<StoreDto>> GetStoresAsync()
+        {
+            var stores = await this._expenseTypeRepository.GetStoresAsync();
+            return _mapper.Map<List<StoreDto>>(stores);
+        }
+
     }
 }

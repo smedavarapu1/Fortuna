@@ -26,5 +26,19 @@ namespace Fortuna.Data.Repositories.Expense
             await this.SaveAsync(expenseType);
             return expenseType;
         }
+
+        public async Task<List<QuantityType>> GetQuantityTypesAsync()
+        {
+            return await _dbContext.Set<QuantityType>()
+            .AsNoTracking()
+            .ToListAsync();
+        }
+
+        public async Task<List<Store>> GetStoresAsync()
+        {
+            return await _dbContext.Set<Store>()
+            .AsNoTracking()
+            .ToListAsync();
+        }
     }
 }
